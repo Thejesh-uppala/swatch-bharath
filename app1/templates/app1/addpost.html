@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<title>Add post Page</title>
+<head>
+    <link rel="stylesheet" href="../static/css/sell.css">
+    <center>
+    <h2 style="font-size: 31px;"><mark>ADD POST</mark></h2>
+    </center>
+</head>
+    <body style="background-color: rgba(230, 128, 199, 0.356);">
+       <br>
+       <br>
+       <form action="{% url 'addingpost' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <center>
+    <table>
+        <tr>
+            <td><label class="label"><mark>post no</mark></label></td>
+            <td><input type="number" name="postno" id="postno"></td>   
+            <style>
+            label{
+                display: flex;
+                width: 100%;
+                padding-right: 5rem;
+                margin-right: 15px;}
+            </style>
+        </tr>
+        <tr>
+            <td><label class="label"><mark>Post details</mark></label></td>
+            <td><input type="text" name="postdetails" id="postdetails"></td>   
+            <style>
+            label{
+                display: flex;
+                width: 100%;
+                padding-right: 5rem;
+                margin-right: 15px;}
+            </style>
+        </tr>
+        <tr>
+            <td><label class="label"><mark>post image</mark></label></td>
+            <td><input type="file" name="image" id="image"></td>
+            <style>
+            label{
+                display: flex;
+                width: 100%;
+                padding-right: 5rem;
+                margin-right: 15px;}
+            </style>
+        </tr>
+    </table>
+    </center><br><br>
+
+    <center><button type="submit" value="upload" style="height: 45px; width: 90px;">Add post</button></center>
+</form>
+    </body>
+</html>

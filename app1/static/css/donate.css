@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    padding: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body{
+      background-image: url("../static/img/donate.jpg");
+      background-size: cover;
+  }
+
+  h1{
+      text-align: center;
+      font-size: 50px;
+  }
+  .center{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+  }
+  .label{
+      font-size: 30px;
+      
+  }
+  .btn{
+      
+      font-size: xx-large;
+      height: 40px;
+      text-align: center;
+      
+      
+  }

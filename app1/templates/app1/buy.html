@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LEAFNOW BUY PAGE</title>
+<meta name="keywords" content="HTML5,CSS3,HTML,Template,Multi-Purpose,M_Adnan,Corporate Theme,ZAP Multi Purpose Care,eCommerce,ZAP - Multi Purpose eCommerce HTML5 Template">
+<meta name="description" content="ZAP | The Multi-Purpose HTML5 Template">
+<meta name="author" content="thejesh">
+
+<!-- FONTS ONLINE -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+
+<!-- StyleSheets -->
+<link rel="stylesheet" href="../static/css/buycss.css">
+<link rel="stylesheet" href="../static/css/buycss2.css">
+<link rel="stylesheet" href="../static/css/buycss3.css">
+<link rel="stylesheet" href="../static/css/buycss4.css">
+<link rel="stylesheet" href="../static/css/buycss5.css">
+<link rel="stylesheet" href="../static/css/buycss6.css">
+
+<style>
+.intro-bg {
+	background: url(../static/img/buybg.jpg) center center no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+	padding: 100px 0;
+	overflow: hidden;
+}
+.intro-bg h1 {
+	font-size: 26px;
+	letter-spacing: 1px;
+	font-weight:bold;
+}
+.intro-bg:before {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.3);
+	content: "";
+	z-index: -1;
+}
+.intro-style .intro-in {
+	position: relative;
+	overflow: hidden;
+}
+.intro-style .intro-in .intro-hover {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.8);
+	opacity: 0;
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-size: 16px;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.intro-style li {
+	margin-bottom: 30px;
+	text-align: center;
+}
+.intro-style .intro-in {
+	box-shadow: 0px 0 20px rgba(0,0,0,0.2);
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.intro-style .intro-in:hover {
+	box-shadow: 0px 0 20px rgba(0,0,0,0.3);
+}
+.intro-style .intro-in:hover .intro-hover {
+	opacity: 1;
+}
+.intro-style .intro-in h5 {
+	background: #fff;
+	margin: 0px;
+	font-size: 16px;
+	position: relative;
+	z-index: 999;
+	font-weight: 300;
+	letter-spacing: 1px;
+	padding: 20px;
+	background: rgba(0,0,0,0.05);
+	font-family: 'montserratregular';
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.intro-style .intro-in h5 span {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+}
+.intro-style .intro-in:hover h5 {
+	background: #fff;
+}
+.overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.position-center-center {
+	width: 100%;
+	text-align: center;
+}
+.new-tags {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: #000;
+	height: 50px;
+	width: 50px;
+}
+.intores {
+	padding: 0;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+.heading h4{
+	letter-spacing:1px;
+	font-size:24px;
+}
+.btn{
+	font-size:14px;
+	color:#2d3a4b !important; 
+}
+.btn:hover{
+	background:#050a11;
+}
+.intores img {
+	width: 100%;
+}
+</style>
+</head>
+<body>
+
+<!-- Page Wrap -->
+<div id="wrap">
+  <div class="intro-style">
+    <div class="intro-bg" style="position:relative;">
+      <div class="container">
+        <div class="animate bounceIn" data-wow-delay="0.9s">
+          <div class="heading-block light text-center margin-bottom-20"> 
+            <h1 class="text-white font-light"> LEAFNOW 
+                <br> Nurture the planet with Green
+            </h1>
+            
+          </div>
+          <div class="link-to text-center margin-top-0 margin-bottom-50"> <a href="homepage" class="btn btn-white">GO TO HOMEPAGE</a></div>
+        </div>
+      </div>
+    </div>
+	<center>
+	<div class="container-fluid" id="link">
+        <div class="heading text-center margin-top-100  margin-bottom-50"> 
+          <h4>Featured plants and seeds</h4>
+    	</div> 
+	   
+	{% if key1 %}
+		{% for i in key1 %}
+		<ul class="row intores">
+			<li class="col-md-4 animate fadeInUp" data-wow-delay="0.2s">
+			<div class="intro-in"> <img class="img-responsive" src="{{MEDIA_URL}}{{i.Image.url}}" alt="">
+				<a href="buydemo" class="intro-hover" target="_blank">
+				<div class="position-center-center">VIEW</div>
+				</a>
+				<h5>Itemname : {{i.Itemname}}</h5>
+				<h5>Price : {{i.Price}}</h5>
+			</div>
+			</li>
+		</ul>
+		{% endfor %}
+	{% endif %}
+
+	</div>
+</center>
+    </div>
+  </div>
+</body>
+</html>

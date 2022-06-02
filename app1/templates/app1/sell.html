@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<title>Sell Page</title>
+<head>
+    <link rel="stylesheet" href="../static/css/sell.css">
+    <center>
+    <h1><mark>Sell Page</mark></h1>
+    </center>
+</head>
+    <body style="background-color: rgba(32, 138, 115, 0.356);">
+       <br>
+       <br>
+       
+       
+
+<form action="{% url 'addingitem' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+        <center>
+            <table>
+                <tr>
+                    <td><label class="label"><mark>username</mark></label></td>
+                    <td><input type="text" name="username" id="username" required></td>   
+                    <style>
+                    label{
+                        display: flex;
+                        width: 100%;
+                        padding-right: 5rem;
+                        margin-right: 15px;}
+                    </style>
+                </tr>
+                <tr>
+                    <td><label class="label"><mark>Item image</mark></label></td>
+                    <td><input type="file" name="image" id="image" required></td>
+                    <style>
+                    label{
+                        display: flex;
+                        width: 100%;
+                        padding-right: 5rem;
+                        margin-right: 15px;}
+                    </style>
+                </tr>
+                <tr>
+                    <td>
+                    <label class="label"><mark>Plant/seed Name</mark></label>
+                    </td>
+                    <td><input type="text" name="itemname" required></td>
+                    <style>
+                        label{
+                        display: flex;
+                        width: 100%;
+                        padding-right: 5rem;
+                        margin-right: 15px;}
+                    </style>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="label"><mark>Price</mark></label>
+                    </td>
+                    <td>
+                        <input type ="number" name ="price" required>
+                    </td>
+                        <style>
+                            label{
+                                display: flex;
+                                width: 100%;
+                                padding-right: 5rem;
+                                margin-right: 15px;}
+                            </style>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="label"><mark>Email</mark></label>
+                    </td>
+                        <style>
+                            label{
+                                display: flex;
+                                width: 100%;
+                                padding-right: 5rem;
+                                margin-right: 15px;}
+                            </style>
+                    <td>
+                        <input type ="email" name="email" required>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            &nbsp;  &nbsp;  &nbsp;   &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        
+        </center>
+        <center><button type="submit" value="upload" style="height: 45px; width: 90px;">Sell</button></center>
+</form>
+
+
+</body>
+</html>

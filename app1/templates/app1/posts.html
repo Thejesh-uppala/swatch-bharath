@@ -1,0 +1,22 @@
+<html>
+<head>
+    <link rel="stylesheet" href="../static/css/posts.css"
+</head>
+<body>
+<h1>POSTS</h1>
+{% if key1 %}
+      {% for i in key1 %}
+      <div style="margin: 40px;">
+<div class="grid-container">
+  <div>
+
+    <img class='grid-item grid-item-1' src='{{MEDIA_URL}}{{i.Image.url}}' alt=''>
+  </div>
+</div>
+<br>
+<center><h2>{{i.Postdetails}}</h2></center><br>
+</div>
+{% endfor %}
+{% endif %}
+</body>
+</html>
