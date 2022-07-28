@@ -1,10 +1,8 @@
 from django.db import models
-
-#leaf users
-class LeafUser(models.Model):
+class User(models.Model):
     Username = models.CharField(max_length=50)
     Email = models.EmailField(max_length=50)
-    Service = models.CharField(max_length=50)
+    Servicetype = models.CharField(max_length=50)
     Status = models.CharField(max_length=50)
     Phonenumber = models.CharField(max_length=50)
     Password = models.CharField(max_length=50)

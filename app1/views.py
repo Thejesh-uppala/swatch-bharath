@@ -12,9 +12,9 @@ def loginUser(request):
     if request.method == "POST":
         email = request.POST['email']
         password = request.POST['password']
-        a = str("cst")#to approve account admin need to overwrite status value with this key string to approve 
+        a = str("swatchbharath123")#to approve account admin need to overwrite status value with this key string to approve 
         # Checking the emailid with database
-        user = LeafUser.objects.get(Email=email)
+        user = User.objects.get(Email=email)
 
         if user:
             if user.Password == password:
@@ -31,7 +31,7 @@ def loginUser(request):
                 return render(request,"app1/login.html",{'msg':message})
         else:
             message = "User does not exist"
-            return render(request,"app1/signup.html",{'msg':message})
+            return render(request,"app1/login.html",{'msg':message})
 
 def signup(request):
     return render(request,'app1/signup.html')
@@ -42,20 +42,20 @@ def inputfromsignup(request):#input from signup page
         username = request.POST['username']
         email = request.POST['email']
         status = request.POST['status']
-        service = request.POST['service']
+        servicetype = request.POST['service']
         phno = request.POST['phno']
         password = request.POST['password']
         confirmpassword = request.POST['cpassword']
 
     # First we will validate that user already exist
-    user = LeafUser.objects.filter(Email=email)
+    user = User.objects.filter(Email=email)
 
     if user:
         message = "User already exist"
         return render(request,'app1/signup.html',{'msg':message})
     else:
         if password == confirmpassword:
-            newuser = LeafUser.objects.create(Username=username,Email=email,Status=status,Service=service,Phonenumber=phno,Password=password,Confirmpassword=confirmpassword)
+            newuser = User.objects.create(Username=username,Email=email,Status=status,Servicetype=servicetype,Phonenumber=phno,Password=password,Confirmpassword=confirmpassword)
             message = "User registered Successfully,Approval Pending "
             return render(request,'app1/login.html',{'msg':message})
         else:
